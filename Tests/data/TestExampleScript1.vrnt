@@ -1,0 +1,9 @@
+﻿dllload sepia;
+# test
+int main() 
+{
+string _path = "D:/Files/img.bmp";
+sepia(_path, appendPath(_path, "_sepia"));
+return 0;
+}
+# bingobongo

@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Drawing.Common" Version="6.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ErrorHandler\ErrorHandlerModule.csproj" />
+    <ProjectReference Include="..\Executor\ExecutorModule.csproj" />
+    <ProjectReference Include="..\Lekser\LexerModule.csproj" />
+    <ProjectReference Include="..\Parser\ParserModule.csproj" />
+    <ProjectReference Include="..\ScriptReader\ScriptReaderModule.csproj" />
+    <ProjectReference Include="..\SemanticAnalyzer\SemanticAnalyzerModule.csproj" />
+    <ProjectReference Include="..\Variant.StandardLibrary\Variant.StandardLibrary.csproj" />
+  </ItemGroup>
+
+</Project>

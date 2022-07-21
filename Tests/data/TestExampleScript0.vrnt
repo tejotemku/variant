@@ -1,0 +1,59 @@
+﻿dllload sepia;
+dllload blackandwhite;
+# test
+int main() 
+{
+	print(toString(  3 + 1 * 2  ));
+	print(toString(  (3 + 1) * 2  ));
+	print(toString(  -(3 + 1) * 2  ));
+	print(iftest(0));
+	print(iftest(2));
+	print("silnia: " + toString(silnia(6)));
+
+	int incr = 1;
+	print("one incremented equals: " + toString(incr++));
+
+	string _path = input("Prosze wprowadzić folder z plikami: ");
+	print(_path);
+	directory filezzz = directory(_path);
+	print(toString(filezzz.NumberOfFiles));
+	print("W lokalizacji " + _path + " znajdują się pliki: \n");
+	foreach(file f in filezzz.Files)
+	{
+		print(f.Name + f.Extension);
+		sepia(f.FilePath, appendPath(f.FilePath, "_sepia"));
+		blackandwhite(f.FilePath, appendPath(f.FilePath, "_baw"));
+	}
+
+	_path = "Owczarek Coli" + " Pomidorówka";
+	print(_path);
+	print(toString(1 + toInt("10")));
+
+	print(input("proszę wpisać wiadomość: "));
+	return 0;
+}
+
+string iftest(int res)
+{
+	if ((res == 0 + 1 - 3%2 )  || ("aaga" == "aaa"))
+	#if (-(res == 0))
+	{		
+		return "True";
+	}
+	else 
+	{
+		return "False";
+	}
+}
+
+int silnia(int l)
+{
+	if(l == 1)
+	{
+		return 1;
+	}
+	else
+	{
+		return l*silnia(l-1);
+	}
+}

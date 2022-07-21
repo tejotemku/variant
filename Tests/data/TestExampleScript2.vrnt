@@ -1,0 +1,13 @@
+﻿dllload sepia;
+
+int main() 
+{
+	foreach(int index in folder("D:/Files/Photos/").NumberOfFiles)
+	{
+		if (index < 10 + 2)
+		{
+			index++;
+		}
+	}
+	return 0;
+}

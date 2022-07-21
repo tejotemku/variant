@@ -1,0 +1,15 @@
+﻿dllload sepia;
+
+int main() 
+{
+	int index = 0;
+	foreach(file f in directory("D:/Files/Photos/").Files)
+	{
+		if (index < 10 + 2)
+		{
+			index++;
+		}
+		print(toString(index));
+	}
+	return 0;
+}
